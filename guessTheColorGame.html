@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess the Color</title>
+	<link rel="stylesheet" type="text/css" href="colorGame.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+</head>
+<body>
+	<div id="title-background">
+		<h1>Welcome to the Color Game!</h1>
+		<p>The mission of this game is pick the right color. Show me what you got!</p>
+		<h1>Find the <span id="find" style="text-decoration: underline;"></span> square</h1>
+		<br>
+	</div>
+	<div id="stripe">
+		<ul>
+			<li id="reset"><a href="#">New Colors</a></li>
+			<li><span id="message"></span></li>
+			<li id="easy"><a href="#">Easy</a></li>
+			<li class="selected" id="hard"><a href="#">Hard</a></li>
+		</ul>
+	</div>
+	<div id="container">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square hidden"></div>
+		<div class="square hidden"></div>
+		<div class="square hidden"></div>
+	</div>
+	<script type="text/javascript" src="colorGame.js"></script>
+</body>
+</html>
