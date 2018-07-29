@@ -29,7 +29,7 @@ for(var i = 0; i < selectSquare.length; i++){
 			//function to reset game automatically
 			setTimeout(function(){
 				window.location.reload(true);
-			}, 2000)
+			}, 2000);
 		}
 		else{
 			playAudio("again");

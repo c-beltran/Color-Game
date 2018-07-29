@@ -89,30 +89,63 @@ li:nth-child(n+3):nth-child(-n+4):hover {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-h1{
-	color: #ffffff;
-	margin-bottom: 0px;
-	padding-top: 10px;
-	font-size: 40px;
+	h1{
+		color: #ffffff;
+		margin-bottom: 0px;
+		padding-top: 10px;
+		font-size: 40px;
+	}
+
+	p{
+		color: #ffffff;
+		margin-bottom: 0px;
+		font-size: 28px;
+	}
+
+	ul{
+		margin: 0 auto;
+		list-style-type: none;
+		padding: 0;
+		overflow: hidden;
+		width: 57%;
+	}
+
+	li a{
+		color: #ffffff;
+		text-decoration: none;
+		font-size: 30px;
+	}
+
+	#container{
+		margin: 20px auto;
+		max-width: 600px;
+	}
+
+	#message{
+		color: #ff69b4;
+		font-size: 30px;
+	}
+
 }
 
-p{
-	color: #ffffff;
-	margin-bottom: 0px;
-	font-size: 28px;
-}
-
-ul{
-	margin: 0 auto;
-	list-style-type: none;
-	padding: 0;
-	overflow: hidden;
-	width: 38%;
-}
-
-#container{
-	margin: 20px auto;
-	max-width: 600px;
-}
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px){
+	ul{
+		margin: 0 auto;
+		list-style-type: none;
+		padding: 0;
+		overflow: hidden;
+		width: 38%;
+	}
 
 }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	ul{
+		margin: 0 auto;
+		list-style-type: none;
+		padding: 0;
+		overflow: hidden;
+		width: 38%;
+	}
+}
+
