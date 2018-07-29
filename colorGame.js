@@ -20,12 +20,19 @@ for(var i = 0; i < selectSquare.length; i++){
 	selectSquare[i].addEventListener("click", function(){
 		var clickedColor = this.style.backgroundColor;
 		if(this.style.backgroundColor === pickedColor){
-			messageDisplay.textContent = "Correct!"
+			playAudio("correct");
+			messageDisplay.textContent = "Correct!";
+			messageDisplay.style.color = "#32CD32";
 			changeColors(clickedColor);
 			titleBackground.style.backgroundColor = clickedColor;
 			reset.textContent = "Play Again";
+			//function to reset game automatically
+			setTimeout(function(){
+				window.location.reload(true);
+			}, 2000)
 		}
 		else{
+			playAudio("again");
 			this.style.backgroundColor = "#232323";
 			messageDisplay.textContent = "Try Again"
 		}
@@ -41,6 +48,10 @@ function changeColors(color){
 		selectSquare[i].style.backgroundColor = color;
 	}
 }
+
+hard.addEventListener("click", function(){
+	window.location.reload(true);
+});
 
 
 function random(){
@@ -89,12 +100,14 @@ easy.addEventListener("click", function(){
 	selectSquare[i].addEventListener("click", function(){
 		var clickedColor = this.style.backgroundColor;
 		if(this.style.backgroundColor === pickedColor){
+			playAudio("correct");
 			messageDisplay.textContent = "Correct!"
 			changeColors(clickedColor);
 			titleBackground.style.backgroundColor = clickedColor;
 			reset.textContent = "Play Again";
 		}
 		else{
+			playAudio("again");
 			this.style.backgroundColor = "#232323";
 			messageDisplay.textContent = "Try Again"
 		}
@@ -102,7 +115,15 @@ easy.addEventListener("click", function(){
 }
 });
 
-hard.addEventListener("click", function(){
+function playAudio(outcome){
+	var success = document.getElementById("success");
+	var failed = document.getElementById("failed");
 
-	window.location.reload(true);
-});
+	if(outcome == "correct"){
+		success.play();
+	}
+	else if(outcome == "again"){
+		failed.play();
+	}
+
+}

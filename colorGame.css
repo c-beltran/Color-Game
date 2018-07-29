@@ -73,7 +73,7 @@ li:nth-child(n+3):nth-child(-n+4):hover {
 }
 
 #message{
-	color: #ffffff;
+	color: #ff69b4;
 }
 
 #stripe{
@@ -85,4 +85,34 @@ li:nth-child(n+3):nth-child(-n+4):hover {
 
 #reset:hover {
 	background-color: #2ab3cd;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+h1{
+	color: #ffffff;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	font-size: 40px;
+}
+
+p{
+	color: #ffffff;
+	margin-bottom: 0px;
+	font-size: 28px;
+}
+
+ul{
+	margin: 0 auto;
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+	width: 38%;
+}
+
+#container{
+	margin: 20px auto;
+	max-width: 600px;
+}
+
 }

@@ -4,6 +4,10 @@
 	<title>Guess the Color</title>
 	<link rel="stylesheet" type="text/css" href="colorGame.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.js"
+	integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+	crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="title-background">
@@ -28,6 +32,8 @@
 		<div class="square hidden"></div>
 		<div class="square hidden"></div>
 	</div>
+	<audio id="success" src="audio/applause.mp3" ></audio>
+	<audio id="failed" src="audio/banana_peel.mp3" ></audio>
 	<script type="text/javascript" src="colorGame.js"></script>
 </body>
 </html>
